@@ -21,7 +21,7 @@ To explore the projects and contribute:
 
 Clone this repository to your local machine:
 
-   git clone https://github.com/Praveensv11/PythonCodeArchive.git
+   git clone 'https://github.com/Praveensv11/PythonCodeArchive.git'
 
 ## Contributing
 If you're interested in contributing to this repository, you can:
