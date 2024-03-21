@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -25,19 +26,35 @@ facts = {
     }
 }
 
+# getting all fact
 @app.get('/')
 def index():
     return facts
 
+# getting fact using id
 @app.get('{fact_id}')
 def get_facts(fact_id : int):
     return facts[fact_id]
 
+# getting fact
 @app.get('{fact_id}/fact')
 def get_facts(fact_id : int):
     return facts[fact_id]['fact']
 
+# getting detail
 @app.get('{fact_id}/detail')
 def get_facts(fact_id : int):
     return facts[fact_id]['detail']
 
+# add fact
+class Fact(BaseModel):
+    fact : str
+    detail : str
+
+@app.post('/create_fact/{fact_id}')
+def create_student(fact_id: int, fact: Fact):
+    if fact_id in facts:
+        return {"Error" : "Id already exist"}
+
+    facts[fact_id] = fact
+    return facts[fact_id]
