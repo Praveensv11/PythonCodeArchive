@@ -1,0 +1,5 @@
+company : Global Talent pool
+     (More Jobs)
+skill : Python  ,  Python development  ,  Python framework  ,  Django  ,  Fast API  ,  fastapi  ,  Celery  ,  JavaScript  ,  java script  ,  React  ,  Linux Server Administration  ,  Git  ,  GitLab  ,  AWS  ,  RDS  ,  S3  ,  Lambda
+Published_date : Posted few days ago
+Info : https://www.timesjobs.com/job-detail/python-developer-global-talent-pool-bengaluru-bangalore-15-to-20-yrs-jobid-XXwHyySu1GJzpSvf__PLUS__uAgZw==&source=srp

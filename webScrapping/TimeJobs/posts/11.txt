@@ -1,0 +1,4 @@
+company : innefu labs pvt. ltd.
+skill : python  ,  database  ,  django  ,  neo4j  ,  mining  ,  web crawling
+Published_date : Posted few days ago
+Info : https://www.timesjobs.com/job-detail/python-developer-innefu-labs-pvt-ltd-delhi-delhi-ncr-4-to-5-yrs-jobid-FxKbGzMsPBFzpSvf__PLUS__uAgZw==&source=srp
