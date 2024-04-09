@@ -8,7 +8,8 @@ soup = BeautifulSoup(html_text, 'lxml')
 
 all_tags = set()
 while True:
-    user_tags = input('Enter the tags name or enter "v" to view tags: ')
+    user_tags = input('Enter the tags name or enter "v" to view tags "Enter" to get all quotes: ').lower().strip()
+    quotes_datas = soup.find_all('div', class_='quote')
 
     if user_tags == 'v':
         tag = soup.find_all('a', class_='tag')
@@ -16,7 +17,6 @@ while True:
             all_tags.add(i.text)
         print(all_tags)
     elif user_tags in all_tags:
-        quotes_datas = soup.find_all('div', class_='quote')
         for quotes_data in quotes_datas:
             quotes_tags = quotes_data.find('div', class_='tags')
             content = quotes_tags.find('meta', class_='keywords')['content']
@@ -24,4 +24,9 @@ while True:
             if user_tags in content:
                 quotes_text = quotes_data.find('span', class_='text').text
                 print(quotes_text)
+        break
+    elif user_tags == '':
+        for quotes_data in quotes_datas:
+            quote_text = quotes_data.find('span', class_='text').text
+            print(quote_text)
         break
