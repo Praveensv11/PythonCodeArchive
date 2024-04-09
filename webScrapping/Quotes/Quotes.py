@@ -16,12 +16,12 @@ while True:
             all_tags.add(i.text)
         print(all_tags)
     elif user_tags in all_tags:
-        print('done')
+        quotes_datas = soup.find_all('div', class_='quote')
+        for quotes_data in quotes_datas:
+            quotes_tags = quotes_data.find('div', class_='tags')
+            content = quotes_tags.find('meta', class_='keywords')['content']
+            
+            if user_tags in content:
+                quotes_text = quotes_data.find('span', class_='text').text
+                print(quotes_text)
         break
-
-
-# quotes = soup.find_all('span', class_="text")
-
-# for quote in quotes:
-#     quote = quote.text.strip()
-#     print(quote)
